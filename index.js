@@ -1,4 +1,4 @@
-function los(min, max) {
+function draw(min, max) {
   min = parseInt(min, 10);
   max = parseInt(max, 10);
 
@@ -11,18 +11,18 @@ function los(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-console.log(los(10, 50));
+console.log(draw(10, 50));
 
-function losuj(ile, min, max) {
+function drawArray(length, min, max) {
   wynik = [];
-  for (i = 0; i < ile; i++) {
-    wynik.push(los(min, max));
+  for (i = 0; i < length; i++) {
+    wynik.push(draw(min, max));
   }
 
-  return wynik;
+  return result;
 }
 
-console.log(losuj(6, 1, 100));
+console.log(drawArray(6, 1, 100));
 
 function generatePassword(length) {
   let text = "";
