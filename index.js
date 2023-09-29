@@ -24,4 +24,17 @@ function losuj(ile, min, max) {
 
 console.log(losuj(6, 1, 100));
 
-// funkcji(10) dlugosc wyrazu male,duze litery i cyfry
+function generatePassword(length) {
+  let text = "";
+  let possible =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()/";
+
+  for (var i = 0; i < length; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+console.log(generatePassword(8));
+console.log(generatePassword(15));
+console.log(generatePassword(5));
